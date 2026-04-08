@@ -5,6 +5,12 @@ const fs = require("fs");
 const app = express();
 app.use(cors());
 
+app.get("/", (req, res) => {
+    res.send("Payroll API is running!");
+});
+
+
+
 const data = JSON.parse(fs.readFileSync("data.json"));
 const PORT = process.env.PORT || 5000;
 
