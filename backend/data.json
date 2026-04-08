@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "Alice",
+        "hourly_rate": 50,
+        "hours_worked": 40,
+        "tax_rate": 0.2
+    },
+    {
+        "id": 2,
+        "name": "Bob",
+        "hourly_rate": 30,
+        "hours_worked": 35,
+        "tax_rate": 0.15
+    }
+]
