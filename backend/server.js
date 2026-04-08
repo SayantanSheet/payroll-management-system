@@ -6,6 +6,7 @@ const app = express();
 app.use(cors());
 
 const data = JSON.parse(fs.readFileSync("data.json"));
+const PORT = process.env.PORT || 5000;
 
 const calculateSalary = (emp) => {
     const gross = emp.hourly_rate * emp.hours_worked;
@@ -34,6 +35,7 @@ app.get("/employees/:id", (req, res) => {
     res.json(calculateSalary(emp));
 });
 
-app.listen(5000, () => {
-    console.log("Server running on port 5000");
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
