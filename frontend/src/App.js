@@ -6,7 +6,7 @@ function App() {
   const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
-    axios.get("https://payroll-backend-2546.onrender.com")
+    axios.get("https://payroll-backend-2546.onrender.com/employees")
     .then(res => setEmployees(res.data))
     .catch(err => console.log(err));
   },[]);
